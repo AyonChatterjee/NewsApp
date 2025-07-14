@@ -26,28 +26,7 @@ A modern and responsive news web application built using **ReactJS** and **Boots
 
 ## 📁 Project Structure (Modular Architecture)
 
-news-app/
-│
-├── public/
-│ └── index.html
-│
-├── src/
-│ ├── assets/
-│ │ └── newsicon.png # Fallback image for missing article thumbnails
-│ │
-│ ├── components/
-│ │ ├── Navbar.jsx # Navbar with category buttons
-│ │ ├── NewsBoard.jsx # Fetches and renders news articles
-│ │ └── NewsItem.jsx # Individual news card UI
-│ │
-│ ├── App.jsx # Root component combining everything
-│ ├── App.css # Custom styles
-│ ├── index.css # Global styles
-│ └── main.jsx # Application entry point
-│
-├── .env # Environment variables (API key goes here)
-├── package.json
-└── README.md
+<pre><code>```bash news-app/ ├── public/ │ └── index.html │ ├── src/ │ ├── assets/ │ │ └── newsicon.png │ │ │ ├── components/ │ │ ├── Navbar.jsx │ │ ├── NewsBoard.jsx │ │ └── NewsItem.jsx │ │ │ ├── App.jsx │ ├── App.css │ ├── index.css │ └── main.jsx │ ├── screenshots/ │ ├── Business_category.png │ └── Sports_category.png │ ├── .env ├── package.json └── README.md ```</code></pre>
 
 ## 📸 Screenshots
 
