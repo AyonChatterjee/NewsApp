@@ -46,7 +46,7 @@ news-app/
 │   ├── index.css
 │   └── main.jsx
 │
-├── screenshots/                   # ✅ Add this folder for project screenshots
+├── screenshots/                   # Added this folder for project screenshots
 │   ├── homepage.png
 │   └── newscard.png
 │
@@ -59,8 +59,7 @@ news-app/
 
 | Business | Sports |
 |-----------|-----------|
-| ![Business News](./screenshots/Business_category.png) | ![Sports News](./screenshots/Sports_category.png) |
-
+| ![Business News](src/screenshots/Business_category.png) | ![Sports News](src/screenshots/Sports_category.png) |
 
 
 🧪 Future Improvements
