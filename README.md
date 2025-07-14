@@ -51,7 +51,7 @@ news-app/
 
 ## 📸 Screenshots
 
-| Home Page | News Card |
+| Business | Sports |
 |-----------|-----------|
 | ![Business News](./screenshots/Business_category.png) | ![Sports News](./screenshots/Sports_category.png) |
 
