@@ -11,24 +11,24 @@ const Navbar = ({ setCategory, theme, toggleTheme }) => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-
-                        <li className="nav-item">
-                            <div className="nav-link" onClick={() => setCategory("business")}>Business</div>
-                        </li>
-                        <li className="nav-item">
-                            <div className="nav-link" onClick={() => setCategory("entertainment")}>Entertainment</div>
-                        </li>
-                        <li className="nav-item">
-                            <div className="nav-link" onClick={() => setCategory("health")}>Health</div>
-                        </li>
-                        <li className="nav-item">
-                            <div className="nav-link" onClick={() => setCategory("science")}>Science</div>
-                        </li>
-                        <li className="nav-item">
-                            <div className="nav-link" onClick={() => setCategory("sports")}>Sports</div>
-                        </li>
-
+                        {[
+                            "business",
+                            "entertainment",
+                            "health",
+                            "science",
+                            "sports"
+                        ].map((item) => (
+                            <li className="nav-item" key={item}>
+                                <div
+                                    className={`nav-link custom-nav-link`}
+                                    onClick={() => setCategory(item)}
+                                >
+                                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                                </div>
+                            </li>
+                        ))}
                     </ul>
+
 
                     <button
                         className={`btn btn-${theme === 'light' ? 'dark' : 'light'} me-3`}
