@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react"
 import NewsItem from "./Newsitem";
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+
+// ❗ Configure once to remove spinner
+NProgress.configure({ showSpinner: false });
+
 
 const Newsboard = ({ category, searchTerm }) => {
     // Fetching news articles based on category and search term
@@ -9,6 +15,9 @@ const Newsboard = ({ category, searchTerm }) => {
     useEffect(() => {
         const fetchNews = async () => {
             try {
+
+                NProgress.start(); // start loading bar
+
                 let url = "";
 
                 if (searchTerm.trim() === "") {
@@ -24,9 +33,13 @@ const Newsboard = ({ category, searchTerm }) => {
                 } else {
                     setArticles([]);
                 }
+
+                NProgress.done() ; // End loading bar
             } catch (error) {
                 console.error("Failed to fetch news:", error);
                 setArticles([]);
+
+                NProgress.done() ; // Even an error 
             }
         };
 
