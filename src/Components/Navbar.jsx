@@ -1,4 +1,17 @@
-const Navbar = ({ setCategory, theme, toggleTheme }) => {
+import { useState } from "react"
+
+const Navbar = ({ setCategory, theme, toggleTheme, onSearch }) => {
+
+    const [searchInput, setSearchInput] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (searchInput.trim() !== "") {
+            onSearch(searchInput);
+        }
+    };
+
     return (
         <nav className={`navbar navbar-expand-lg ${theme === 'light' ? 'bg-light' : 'bg-dark'} navbar-${theme}`} data-bs-theme={theme}>
             <div className="container-fluid">
@@ -38,8 +51,8 @@ const Navbar = ({ setCategory, theme, toggleTheme }) => {
                         {theme === "light" ? "🌙 Dark" : "☀️ Light"} Mode
                     </button>
 
-                    <form className="d-flex" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <form className="d-flex" role="search" onSubmit={handleSubmit}>
+                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={searchInput} onChange={(e) => setSearchInput(e.target.value)} />
                         <button className="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
