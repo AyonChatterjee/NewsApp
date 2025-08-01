@@ -44,10 +44,11 @@ news-app/
 │   ├── App.jsx
 │   ├── App.css
 │   ├── index.css
+│   ├── useTheme.jsx
 │   └── main.jsx
 │
-├── screenshots/                   # ✅ Add this folder for project screenshots
-├── screenshots/                   # Added this folder for project screenshots
+├── screenshots/                   
+├── screenshots/                   
 │   ├── homepage.png
 │   └── newscard.png
 │
@@ -65,9 +66,11 @@ news-app/
 | ![Business News](src/screenshots/Business_category.png) | ![Sports News](src/screenshots/Sports_category.png) |
 
 
+<pre><code>```
 🧪 Future Improvements
 🔍 Add search functionality
 🔄 Add infinite scrolling or pagination
 🌙 Dark mode toggle
 🌐 Multi-language support
-✅ Add unit testing
+✅ Add unit testing 
+```</code></pre>
